@@ -1,24 +1,22 @@
-package com.wasabi.amt.services;
+package ch.tsimwi.amt.services;
 
 import ch.heigvd.amt.framework.api.ServiceTest;
 import ch.heigvd.amt.framework.exceptions.InvalidOperationException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class JokesServiceTest extends ServiceTest {
+class MotivationalServiceTest extends ServiceTest {
 
   @BeforeEach
   void setupService() {
-    service = new JokesService();
+    service = new MotivationalService();
   }
 
   @Test
-  void itShouldProvideATellJokeOperation() throws InvalidOperationException {
-    String value = service.execute(JokesService.OPERATION_TELL_JOKE, null);
+  void itShouldProvideAMotivationalSpeechOperation() throws InvalidOperationException {
+    String value = service.execute(MotivationalService.OPERATION_TELL_MOTIVATIONAL_SPEECH, null);
     assertNotNull(value);
   }
 
